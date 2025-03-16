@@ -49,7 +49,7 @@ public class UserServiceController {
 		return responseEntity;
 	}
 	
-	@PostMapping("/validate/{token}")
+	@GetMapping("/validate/{token}")
 	public UserDto validateToken(@PathVariable String token) {
 		return UserDto.from(userService.validateToken(token));
 	}
